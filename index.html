@@ -15,16 +15,16 @@
 <body class="font-poppins text-white">
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home screen -->
-        <section class="home hidden flex min-h-screen items-center justify-center">
+        <section id="home-screen" class="flex min-h-screen items-center justify-center">
             <div class="flex flex-col items-center">
                 <h1 class="text-[170px] font-anton">ALPHABET CLASH</h1>
                 <p class="text-2xl font-medium leading-7 mb-14">Unleash Your Keyboard Kung Fu : Press “Enter” to Play
                 </p>
-                <button class="bg-white text-[#010313] px-8 py-[22px] rounded-lg">Play Now</button>
+                <button class="bg-white text-[#010313] px-8 py-[22px] rounded-lg" onclick="play()">Play Now</button>
             </div>
         </section>
         <!-- playground -->
-        <section class="play-ground hidden flex flex-col items-center justify-center min-h-screen">
+        <section id="play-ground" class="hidden pt-20">
             <!-- playground container -->
             <div class="flex flex-col items-center justify-between gap-8">
                 <!-- screen -->
@@ -37,43 +37,43 @@
                             while playing...</p>
                     </div>
                     <div class="flex items-center justify-center min-h-full">
-                        <p class="text-[#010313] text-9xl font-semibold">Y</p>
+                        <p id="current-alphabet" class="text-[#010313] text-9xl font-semibold uppercase">Y</p>
                     </div>
                 </div>
                 <!-- keyboard-->
                 <div>
                     <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd text-[#010313] bg-white">q</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">w</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">e</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">r</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">t</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">y</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">u</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">i</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">o</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">p</kbd>
+                        <kbd id="q" class="kbd text-[#010313] bg-white">q</kbd>
+                        <kbd id="w" class="kbd text-[#010313] bg-white">w</kbd>
+                        <kbd id="e" class="kbd text-[#010313] bg-white">e</kbd>
+                        <kbd id="r" class="kbd text-[#010313] bg-white">r</kbd>
+                        <kbd id="t" class="kbd text-[#010313] bg-white">t</kbd>
+                        <kbd id="y" class="kbd text-[#010313] bg-white">y</kbd>
+                        <kbd id="u" class="kbd text-[#010313] bg-white">u</kbd>
+                        <kbd id="i" class="kbd text-[#010313] bg-white">i</kbd>
+                        <kbd id="o" class="kbd text-[#010313] bg-white">o</kbd>
+                        <kbd id="p" class="kbd text-[#010313] bg-white">p</kbd>
                     </div>
                     <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd text-[#010313] bg-white">a</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">s</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">d</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">f</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">g</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">h</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">j</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">k</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">l</kbd>
+                        <kbd id="a" class="kbd text-[#010313] bg-white">a</kbd>
+                        <kbd id="s" class="kbd text-[#010313] bg-white">s</kbd>
+                        <kbd id="d" class="kbd text-[#010313] bg-white">d</kbd>
+                        <kbd id="f" class="kbd text-[#010313] bg-white">f</kbd>
+                        <kbd id="g" class="kbd text-[#010313] bg-white">g</kbd>
+                        <kbd id="h" class="kbd text-[#010313] bg-white">h</kbd>
+                        <kbd id="j" class="kbd text-[#010313] bg-white">j</kbd>
+                        <kbd id="k" class="kbd text-[#010313] bg-white">k</kbd>
+                        <kbd id="l" class="kbd text-[#010313] bg-white">l</kbd>
                     </div>
                     <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd text-[#010313] bg-white">z</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">x</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">c</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">v</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">b</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">n</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">m</kbd>
-                        <kbd class="kbd text-[#010313] bg-white">/</kbd>
+                        <kbd id="z" class="kbd text-[#010313] bg-white">z</kbd>
+                        <kbd id="x" class="kbd text-[#010313] bg-white">x</kbd>
+                        <kbd id="c" class="kbd text-[#010313] bg-white">c</kbd>
+                        <kbd id="v" class="kbd text-[#010313] bg-white">v</kbd>
+                        <kbd id="b" class="kbd text-[#010313] bg-white">b</kbd>
+                        <kbd id="n" class="kbd text-[#010313] bg-white">n</kbd>
+                        <kbd id="m" class="kbd text-[#010313] bg-white">m</kbd>
+                        <kbd id="/" class="kbd text-[#010313] bg-white">/</kbd>
                     </div>
                 </div>
                 <!-- live score -->
@@ -93,16 +93,19 @@
         </section>
         <!-- final score -->
         <section class="score flex hidden items-center justify-center min-h-screen">
-            <div class="text-center space-y-6 w-[396px] h-[282px] rounded-2xl border border-[#FFFFFF33] bg-gradient-to-r from-[#FFFFFF8F] to-[#98979700] flex flex-col items-center justify-center">
+            <div
+                class="text-center space-y-6 w-[396px] h-[282px] rounded-2xl border border-[#FFFFFF33] bg-gradient-to-r from-[#FFFFFF8F] to-[#98979700] flex flex-col items-center justify-center">
                 <h1 class="text-[64px] text-white">
                     <span class="font-extrabold">Score</span> <span class="font-semibold">:</span> <span
                         class="font-medium">14</span>
                 </h1>
                 <button class="bg-white text-[#010313] text-2xl font-semibold px-8 py-4 rounded-lg">Play Again</button>
-                <p class="text-white text-xl font-medium">Practice will make you Pro</p>    
+                <p class="text-white text-xl font-medium">Practice will make you Pro</p>
             </div>
         </section>
     </main>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/alpha-clash.js"></script>
 </body>
 
 </html>
