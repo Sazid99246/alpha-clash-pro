@@ -24,14 +24,16 @@
             </div>
         </section>
         <!-- playground -->
-        <section class="play-ground flex flex-col items-center justify-center min-h-screen">
+        <section class="play-ground hidden flex flex-col items-center justify-center min-h-screen">
             <!-- playground container -->
             <div class="flex flex-col items-center justify-between gap-8">
                 <!-- screen -->
                 <div
                     class="border-[20px] border-[#010313CC] bg-white opacity-70 mx-auto artboard artboard-horizontal phone-6 w-[1170px] rounded-2xl backdrop-blur-[10px]">
                     <div class="flex justify-center">
-                        <p class="text-center text-white px-7 py-4 bg-[#2F2941] text-lg font-medium leading-6 rounded-b-xl">Don't watch keyboard
+                        <p
+                            class="text-center text-white px-7 py-4 bg-[#2F2941] text-lg font-medium leading-6 rounded-b-xl">
+                            Don't watch keyboard
                             while playing...</p>
                     </div>
                     <div class="flex items-center justify-center min-h-full">
@@ -89,8 +91,16 @@
                 </div>
             </div>
         </section>
-        <section class="score">
-
+        <!-- final score -->
+        <section class="score flex hidden items-center justify-center min-h-screen">
+            <div class="text-center space-y-6 w-[396px] h-[282px] rounded-2xl border border-[#FFFFFF33] bg-gradient-to-r from-[#FFFFFF8F] to-[#98979700] flex flex-col items-center justify-center">
+                <h1 class="text-[64px] text-white">
+                    <span class="font-extrabold">Score</span> <span class="font-semibold">:</span> <span
+                        class="font-medium">14</span>
+                </h1>
+                <button class="bg-white text-[#010313] text-2xl font-semibold px-8 py-4 rounded-lg">Play Again</button>
+                <p class="text-white text-xl font-medium">Practice will make you Pro</p>    
+            </div>
         </section>
     </main>
 </body>
