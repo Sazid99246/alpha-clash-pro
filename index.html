@@ -81,25 +81,29 @@
                     <button class="rounded-full text-white bg-[#894189] px-9 py-4 w-40 flex gap-2">
                         Life
                         <img src="images/heart.svg" alt="">
-                        <span>1</span>
+                        <span id="current-life">5</span>
                     </button>
                     <button class="rounded-full text-white bg-[#360490] px-9 py-4 w-40 flex gap-2">
                         Score
                         <img src="images/dollar.svg" alt="">
-                        <span>1</span>
+                        <span id="current-score">0</span>
                     </button>
                 </div>
             </div>
         </section>
         <!-- final score -->
-        <section class="score flex hidden items-center justify-center min-h-screen">
+        <section id="final-score" class="score flex hidden items-center justify-center min-h-screen">
             <div
-                class="text-center space-y-6 w-[396px] h-[282px] rounded-2xl border border-[#FFFFFF33] bg-gradient-to-r from-[#FFFFFF8F] to-[#98979700] flex flex-col items-center justify-center">
+                class="text-center space-y-6 w-[396px] h-[396px] justify-around rounded-2xl border border-[#FFFFFF33] bg-gradient-to-r from-[#FFFFFF8F] to-[#98979700] flex flex-col items-center">
+                <h4 class="text-3xl">Game Over!</h4>
                 <h1 class="text-[64px] text-white">
-                    <span class="font-extrabold">Score</span> <span class="font-semibold">:</span> <span
-                        class="font-medium">14</span>
+                    <span class="font-extrabold">Score</span> <span class="font-semibold" id="game-score">:</span> <span
+                        class="font-medium"></span>
                 </h1>
-                <button class="bg-white text-[#010313] text-2xl font-semibold px-8 py-4 rounded-lg">Play Again</button>
+                <div class="flex items-center justify-between gap-3">
+                    <button onclick="play()" class="bg-white text-[#010313] text-2xl font-semibold px-4 py-2 rounded-lg">Play Again</button>
+                    <button onclick="goHome()" class="bg-white text-[#010313] text-2xl font-semibold px-4 py-2 rounded-lg">Go Home</button>
+                </div>
                 <p class="text-white text-xl font-medium">Practice will make you Pro</p>
             </div>
         </section>
